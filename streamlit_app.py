@@ -1,5 +1,5 @@
 import streamlit as st
 
-st.title('🎈 App Name')
+st.title('Random Forest Classification Model for Assessing Land Suitable for Sorghum Production')
 
-st.write('Hello world!')
+st.write('Sorghum bicolor')
