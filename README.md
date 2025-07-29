@@ -1,13 +1,10 @@
-# 📦 Streamlit App Starter Kit 
-```
-⬆️ (Replace above with your app's name)
-```
+# Random Forest Classification Model for Assessing Land Suitable for Sorghum Production
 
-Description of the app ...
+An interactive app for farmers to assess whether their land suites sorghum cultivation
 
 ## Demo App
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://app-starter-kit.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://Sorghum_Suitability_mL.streamlit.app/)
 
 ## GitHub Codespaces
 
