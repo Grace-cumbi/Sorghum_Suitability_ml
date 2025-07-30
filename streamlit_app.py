@@ -5,9 +5,9 @@ st.title('Random Forest Classification Model for Assessing Land Suitable for Sor
 st.image("https://github.com/Grace-cumbi/Sorghum_Suitability_ml/blob/master/Sorghum.png.jpg?raw=true")
 st.write('Sorghum bicolor')
 with st.expander("Data"):
-st.write('**Raw data**')
-df = pd.read_csv('https://raw.githubusercontent.com/Grace-cumbi/Sorghum_Suitability_ml/refs/heads/master/Data1.csv')
-df
+  st.write('**Raw data**')
+  df = pd.read_csv('https://raw.githubusercontent.com/Grace-cumbi/Sorghum_Suitability_ml/refs/heads/master/Data1.csv')
+  df
 with st.sidebar:
   st.header('Input Features')
   Temperature = st.expander('Temperature', 1,2,3,4)
