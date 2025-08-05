@@ -8,8 +8,12 @@ with st.expander("Data"):
   st.write('**Raw data**')
   df = pd.read_csv('https://raw.githubusercontent.com/Grace-cumbi/Sorghum_Suitability_ml/refs/heads/master/Data1.csv')
   df
+  class = 1,2,3,4
 with st.sidebar:
   st.header('Input Features')
+  with st.expander('Temperature')
+    st.write ('**Temperature**')
+    class
   Temperature = st.expander('Temperature', 1,2,3,4)
   LULC = st.expander('LULC', 1,2,3,4)
   Annual_Rainfall = st.expander('Rainfall', 1,2,3,4)
