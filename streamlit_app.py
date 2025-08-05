@@ -10,7 +10,7 @@ with st.expander("Data"):
   df
 
 st.write('**X**')
-X = df.drop('x','y','Suitability', axis=1)
+X = df.drop(columns = ['x','y','Suitability'])
 X
 
 st.write('**y**')
