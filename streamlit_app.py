@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-from sklearn.esemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier
 
 st.title('Random Forest Classification Model for Assessing Land Suitable for Sorghum Production')
 st.image("https://github.com/Grace-cumbi/Sorghum_Suitability_ml/blob/master/Sorghum.png.jpg?raw=true")
