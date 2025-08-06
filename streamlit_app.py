@@ -21,7 +21,7 @@ with st.expander("Data"):
 with st.sidebar:
   st.header('Input Features')
   Temp = st.selectbox('Mean Annual Temperature', (1,2,3,4))
-  lulc = st.selectbox('Land Use Land Cover (LULC)',(1,2,3,4))
+  LULC = st.selectbox('Land Use Land Cover (LULC)',(1,2,3,4))
   Rainfall = st.selectbox('Annual Rainfall', (1,2,3,4))
   Slope = st.selectbox('Slope', (1,2,3,4))
   LST = st.selectbox('Land Surface Temperature (LST)', (1,2,3,4))
@@ -34,7 +34,7 @@ with st.sidebar:
   CEC = st.selectbox('Cation Exchange Capacity (CEC)', (1,2,3,4))
 
   data = {'Texture': Texture,
-          'PH': ph,
+          'PH': PH,
           'CEC': CEC,
           'Nitrogen': Nitrogen,
           'Carbon': Carbon,
