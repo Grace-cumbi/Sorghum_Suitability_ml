@@ -54,6 +54,7 @@ clf = RandomForestClassifier()
 clf.fit(X,y)
 if st.button("Predict"):
   prediction = clf.predict(X)
+  st.write("prediction")
  
   
 
