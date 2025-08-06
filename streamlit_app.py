@@ -54,11 +54,11 @@ clf = RandomForestClassifier()
 clf.fit(X,y)
 if st.button("Predict"):
   prediction = clf.predict(X)
-  if prediction >3.25:
+  if prediction >= 3.25:
     st.write("Highly Suitable")
-  if prediction >2.5:
+  elif prediction >= 2.5:
     st.write("Moderately Suitable")
-  if prediction >1.75:
+  elif prediction >= 1.75:
     st.write("Marginally Suitable")
   else :
     st.write("Not Suitable")
