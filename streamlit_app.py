@@ -55,9 +55,9 @@ clf.fit(X,y)
 if st button("Predict"):
   prediction = clf.predict(X)
   if predicction >3.25:
-    st.write("Highly Suitable)
+    st.write("Highly Suitable")
   if prediction >2.5:
-    st.write("Moderately Suitable"
+    st.write("Moderately Suitable")
   if prediction >1.75:
     st.write("Marginally Suitable")
   else :
