@@ -45,7 +45,7 @@ with st.sidebar:
           'NDVI': NDVI,
           'LULC': LULC,
           'LST': LST,}
-  input_df = pd.DataFrame(data, index[0])
+  input_df = pd.DataFrame(data, index=[0])
   input_suitability = pd.concat([input_df, X], axis=0)
 
 input_df
