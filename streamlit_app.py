@@ -65,7 +65,7 @@ if st.button("Predict"):
     st.write("Not Suitable")
 
 st.write("Feature Importance")
-st.image("")
+st.image("https://github.com/Grace-cumbi/Sorghum_Suitability_ml/blob/master/feature importance.png")
 
 
   
