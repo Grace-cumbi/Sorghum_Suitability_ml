@@ -64,4 +64,8 @@ if st.button("Predict"):
   else :
     st.write("Not Suitable")
 
+st.write("Feature Importance")
+st.image("")
+
+
   
