@@ -49,6 +49,7 @@ with st.sidebar:
   input_suitability = pd.concat([input_df, X], axis=0)
 
 input_df
+st.image("https://github.com/Grace-cumbi/Sorghum_Suitability_ml/blob/master/Reference.jpg")
 
 clf = RandomForestClassifier()
 clf.fit(X,y)
@@ -65,7 +66,6 @@ if st.button("Predict"):
     st.write("Not Suitable")
 
 st.write("Feature Importance")
-st.image("https://github.com/Grace-cumbi/Sorghum_Suitability_ml/blob/master/feature importance.png")
+st.image("https://github.com/Grace-cumbi/Sorghum_Suitability_ml/blob/master/feature%20importance.png")
 
-
-  
+ 
