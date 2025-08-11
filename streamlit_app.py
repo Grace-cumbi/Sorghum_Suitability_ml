@@ -57,7 +57,7 @@ rf.fit(X_train,y_train)
 if st.button("Predict"):
   prediction = rf.predict(input_suitability)
 
-  if prediction == 4:
+  if prediction.all() == 4:
     st.write("Highly Suitable")
   elif prediction == 3:
     st.write("Moderately Suitable")
