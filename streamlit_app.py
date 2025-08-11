@@ -56,15 +56,15 @@ rf = RandomForestClassifier()
 rf.fit(X_train,y_train)
 if st.button("Predict"):
   prediction = rf.predict(input_suitability)
-  st.success(f'The predicted value is: {prediction[0]}')
-  if prediction >= 3.25:
-    st.write("Highly Suitable")
-  elif prediction >= 2.5:
-    st.write("Moderately Suitable")
-  elif prediction >= 1.75:
-    st.write("Marginally Suitable")
-  else :
-    st.write("Not Suitable")
+
+if prediction >= 3.25:
+  st.write("Highly Suitable")
+elif prediction >= 2.5:
+  st.write("Moderately Suitable")
+elif prediction >= 1.75:
+  st.write("Marginally Suitable")
+else :
+  st.write("Not Suitable")
 
 st.write("Feature Importance")
 st.image("https://github.com/Grace-cumbi/Sorghum_Suitability_ml/blob/master/feature%20importance.png?raw=true")
