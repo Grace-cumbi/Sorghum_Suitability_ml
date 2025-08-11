@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
 
 st.title('Random Forest Classification Model for Assessing Land Suitable for Sorghum Production')
 st.image("https://github.com/Grace-cumbi/Sorghum_Suitability_ml/blob/master/Sorghum.png.jpg?raw=true")
@@ -49,12 +50,12 @@ with st.sidebar:
   input_suitability = pd.concat([input_df, X], axis=0)
 
 input_df
-st.image("https://github.com/Grace-cumbi/Sorghum_Suitability_ml/blob/master/Reference.jpg")
-
-clf = RandomForestClassifier()
-clf.fit(X,y)
+st.image("https://github.com/Grace-cumbi/Sorghum_Suitability_ml/blob/master/Reference.jpg?raw=true")
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+rf = RandomForestClassifier()
+rf.fit(X_train,y_train)
 if st.button("Predict"):
-  prediction = clf.predict(input_suitability)
+  prediction = rf.predict(input_suitability)
   st.success(f'The predicted value is: {prediction[0]}')
   if prediction >= 3.25:
     st.write("Highly Suitable")
@@ -66,6 +67,6 @@ if st.button("Predict"):
     st.write("Not Suitable")
 
 st.write("Feature Importance")
-st.image("https://github.com/Grace-cumbi/Sorghum_Suitability_ml/blob/master/feature%20importance.png")
+st.image("https://github.com/Grace-cumbi/Sorghum_Suitability_ml/blob/master/feature%20importance.png?raw=true")
 
  
