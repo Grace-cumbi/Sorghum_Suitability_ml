@@ -59,9 +59,9 @@ if st.button("Predict"):
 
   if prediction.all() == 4:
     st.write("Highly Suitable")
-  elif prediction == 3:
+  elif prediction.all() == 3:
     st.write("Moderately Suitable")
-  elif prediction == 2:
+  elif prediction.all() == 2:
     st.write("Marginally Suitable")
   else :
     st.write("Not Suitable")
