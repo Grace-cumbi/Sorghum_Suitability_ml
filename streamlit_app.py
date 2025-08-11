@@ -56,16 +56,8 @@ rf = RandomForestClassifier()
 rf.fit(X_train,y_train)
 if st.button("Predict"):
   prediction = rf.predict(input_suitability)
-
-  if prediction.all() == 4:
-    st.write("Highly Suitable")
-  elif prediction.all() == 3:
-    st.write("Moderately Suitable")
-  elif prediction.all() == 2:
-    st.write("Marginally Suitable")
-  else :
-    st.write("Not Suitable")
-
+  st.success(f'The predicted value is: {prediction[0]}') 
+  
 st.write("Feature Importance")
 st.image("https://github.com/Grace-cumbi/Sorghum_Suitability_ml/blob/master/feature%20importance.png?raw=true")
 
