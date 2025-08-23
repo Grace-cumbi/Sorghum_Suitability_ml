@@ -65,14 +65,6 @@ with st.expander("Data"):
   st.write('**y**')
   y = df.Suitability
   y
-  
-st.write("Map Legend")
-st.markdown("""
-- <span style="color:green">**Green**</span>:Highly Suitable
-- <span style="color:lightgreen">**Light Green**</span>:Moderately Suitable
-- <span style="color:orange">**yellow**</span>:Marginally Suitable
-- <span style="color:red">**Red**</span>:Not Suitable
-""", unsafe_allow_html=True)
 
 with st.sidebar:
   st.header('Input Features')
