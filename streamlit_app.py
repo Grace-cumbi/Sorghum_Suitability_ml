@@ -108,7 +108,7 @@ if st.button("Predict"):
     else:  # prediction_value == 1
         prediction_text = "Not Suitable"
         color = "red"
-    st.success(f'The predicted suitability is:[{prediction_text}]') 
+    st.success(f'The predicted suitability is:{prediction_text}') 
   
 st.write("Feature Importance")
 st.image("https://github.com/Grace-cumbi/Sorghum_Suitability_ml/blob/master/feature%20importance.png?raw=true")
