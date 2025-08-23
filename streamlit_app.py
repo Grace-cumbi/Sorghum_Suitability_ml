@@ -16,14 +16,14 @@ folium.Marker(
 
 for index, row in df.iterrows():
     color = 'green' if row['Suitability'] == 1 else 'red'
-        folium.CircleMarker(
-        location=[row['y'], row['x']],
-        radius=5,
-        popup=f"Suitability: {row['Suitability']}",
-        color=color,
-        fill=True,
-        fillColor=color,
-        fillOpacity=0.7
+    folium.CircleMarker(
+    location=[row['y'], row['x']],
+    radius=5,
+    popup=f"Suitability: {row['Suitability']}",
+    color=color,
+    fill=True,
+    fillColor=color,
+    fillOpacity=0.7
     ).add_to(m)
 
 df = pd.read_csv('https://raw.githubusercontent.com/Grace-cumbi/Sorghum_Suitability_ml/refs/heads/master/Data1.csv')
