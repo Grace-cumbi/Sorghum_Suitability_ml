@@ -34,11 +34,16 @@ for index, row in df.iterrows():
     fillColor=color,
     fillOpacity=0.1
     ).add_to(m)
+st.subheader("Map Legend")
+st.markdown("""
+- <span style="color:green">**Green**</span>:Highly Suitable
+- <span style="color:lightgreen">**Light Green**</span>:Moderately Suitable
+- <span style="color:orange">**Orange**</span>:Marginally Suitable
+- <span style="color:red">**Red**</span>:Not Suitable
+""", unsafe_allow_html=True)
 
 df = pd.read_csv('https://raw.githubusercontent.com/Grace-cumbi/Sorghum_Suitability_ml/refs/heads/master/Data1.csv')
 st_data = st_folium(m, width=900, height=500)
-st.image("https://github.com/Grace-cumbi/Sorghum_Suitability_ml/blob/master/final.png?raw=true")
-st.write('Laikipia County Sorghum Poduction Suitability Map')
 with st.expander("Data"):
   st.write('**Raw data**')
   df = pd.read_csv('https://raw.githubusercontent.com/Grace-cumbi/Sorghum_Suitability_ml/refs/heads/master/Data1.csv')
@@ -88,8 +93,21 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_
 rf = RandomForestClassifier()
 rf.fit(X_train,y_train)
 if st.button("Predict"):
-  prediction = rf.predict(input_suitability)
-  st.success(f'The predicted value is: {prediction[0]}') 
+    prediction = rf.predict(input_suitability)
+    prediction_value = prediction[0]
+    if prediction_value == 4:
+        prediction_text = "Highly Suitable"
+        color = "green"
+    elif prediction_value == 3:
+        prediction_text = "Moderately Suitable"
+        color = "lightgreen"
+    elif prediction_value == 2:
+        prediction_text = "Marginally Suitable"
+        color = "yellow"
+    else:  # prediction_value == 1
+        prediction_text = "Not Suitable"
+        color = "red"
+    st.success(f'The predicted suitability is: :{color}[{prediction_text}]') 
   
 st.write("Feature Importance")
 st.image("https://github.com/Grace-cumbi/Sorghum_Suitability_ml/blob/master/feature%20importance.png?raw=true")
