@@ -24,7 +24,7 @@ for index, row in df.iterrows():
     color=color,
     fill=True,
     fillColor=color,
-    fillOpacity=0.7
+    fillOpacity=0.3
     ).add_to(m)
 
 df = pd.read_csv('https://raw.githubusercontent.com/Grace-cumbi/Sorghum_Suitability_ml/refs/heads/master/Data1.csv')
