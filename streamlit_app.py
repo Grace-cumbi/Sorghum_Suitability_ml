@@ -35,14 +35,6 @@ for index, row in df.iterrows():
     fillOpacity=0.1
     ).add_to(m)
   
-st.write("Map Legend")
-st.markdown("""
-- <span style="color:green">**Green**</span>:Highly Suitable
-- <span style="color:lightgreen">**Light Green**</span>:Moderately Suitable
-- <span style="color:orange">**yellow**</span>:Marginally Suitable
-- <span style="color:red">**Red**</span>:Not Suitable
-""", unsafe_allow_html=True)
-
 df = pd.read_csv('https://raw.githubusercontent.com/Grace-cumbi/Sorghum_Suitability_ml/refs/heads/master/Data1.csv')
 st_data = st_folium(m, width=900, height=500)
 with st.expander("Data"):
@@ -57,6 +49,14 @@ with st.expander("Data"):
   st.write('**y**')
   y = df.Suitability
   y
+  
+st.write("Map Legend")
+st.markdown("""
+- <span style="color:green">**Green**</span>:Highly Suitable
+- <span style="color:lightgreen">**Light Green**</span>:Moderately Suitable
+- <span style="color:orange">**yellow**</span>:Marginally Suitable
+- <span style="color:red">**Red**</span>:Not Suitable
+""", unsafe_allow_html=True)
 
 with st.sidebar:
   st.header('Input Features')
