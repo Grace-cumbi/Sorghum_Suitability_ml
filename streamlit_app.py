@@ -1,9 +1,15 @@
 import streamlit as st
 import pandas as pd
+import folium
+from streamlit_folium import st_folium
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 
-st.title('Random Forest Classification Model for Assessing Land Suitable for Sorghum Production')
+st.header('Random Forest Classification Model for Assessing Land Suitable for Sorghum Production')
+m = folium.map(location = 36.8152700, 0.2945864)
+.add_to(m)
+df = pd.read_csv('https://raw.githubusercontent.com/Grace-cumbi/Sorghum_Suitability_ml/refs/heads/master/Data1.csv')
+st_data = st_folium(m, width=50)
 st.image("https://github.com/Grace-cumbi/Sorghum_Suitability_ml/blob/master/final.png?raw=true")
 st.write('Laikipia County Sorghum Poduction Suitability Map')
 with st.expander("Data"):
