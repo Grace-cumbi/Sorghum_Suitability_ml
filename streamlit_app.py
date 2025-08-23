@@ -33,9 +33,25 @@ for index, row in df.iterrows():
     fill=True,
     fillColor=color,
     fillOpacity=0.1
-    ).add_to(m)
+          ).add_to(m)
   
-df = pd.read_csv('https://raw.githubusercontent.com/Grace-cumbi/Sorghum_Suitability_ml/refs/heads/master/Data1.csv')
+legend_html = '''
+<div style="position: fixed; 
+     bottom: 50px; right: 50px; width: 180px; height: 140px; 
+     background-color: white; border:2px solid grey; z-index:9999;
+     font-size:14px; padding: 10px; border-radius: 5px;">
+     <b>Suitability Legend</b><br>
+     <i style="background: green; width: 15px; height: 15px; 
+        display: inline-block; border: 1px solid grey;"></i> Highly Suitable (4)<br>
+     <i style="background: lightgreen; width: 15px; height: 15px; 
+        display: inline-block; border: 1px solid grey;"></i> Moderately Suitable (3)<br>
+     <i style="background: yellow; width: 15px; height: 15px; 
+        display: inline-block; border: 1px solid grey;"></i> Marginally Suitable (2)<br>
+     <i style="background: red; width: 15px; height: 15px; 
+        display: inline-block; border: 1px solid grey;"></i> Not Suitable (1)
+</div>
+'''
+m.get_root().html.add_child(folium.Element(legend_html))
 st_data = st_folium(m, width=900, height=500)
 with st.expander("Data"):
   st.write('**Raw data**')
