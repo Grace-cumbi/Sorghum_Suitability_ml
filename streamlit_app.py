@@ -11,7 +11,7 @@ folium.Marker(
   [36.8152700, 0.2945864], popup="Laikipia"
 ).add_to(m)
 df = pd.read_csv('https://raw.githubusercontent.com/Grace-cumbi/Sorghum_Suitability_ml/refs/heads/master/Data1.csv')
-st_data = st_folium(m, width=500)
+st_data = st_folium(m, width=700, height=500)
 st.image("https://github.com/Grace-cumbi/Sorghum_Suitability_ml/blob/master/final.png?raw=true")
 st.write('Laikipia County Sorghum Poduction Suitability Map')
 with st.expander("Data"):
