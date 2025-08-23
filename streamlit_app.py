@@ -6,7 +6,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 
 st.header('Random Forest Classification Model for Assessing Land Suitable for Sorghum Production')
-m = folium.map(location = [36.8152700, 0.2945864].add_to(m)
+m = folium.Map(location = [36.8152700, 0.2945864].add_to(m)
 df = pd.read_csv('https://raw.githubusercontent.com/Grace-cumbi/Sorghum_Suitability_ml/refs/heads/master/Data1.csv')
 st_data = st_folium(m, width=50)
 st.image("https://github.com/Grace-cumbi/Sorghum_Suitability_ml/blob/master/final.png?raw=true")
