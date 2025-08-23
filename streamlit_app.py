@@ -6,7 +6,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 
 st.header('Random Forest Classification Model for Assessing Land Suitable for Sorghum Production')
-m = folium.Map(location = [36.8152700, 0.2945864], zoom_start= 5)
+m = folium.Map(location = [36.8152700, 0.2945864], zoom_start= 500)
 folium.Marker(
   [36.8152700, 0.2945864], popup="Laikipia"
 ).add_to(m)
