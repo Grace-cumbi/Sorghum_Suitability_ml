@@ -34,11 +34,12 @@ for index, row in df.iterrows():
     fillColor=color,
     fillOpacity=0.1
     ).add_to(m)
-st.subheader("Map Legend")
+  
+st.write("Map Legend")
 st.markdown("""
 - <span style="color:green">**Green**</span>:Highly Suitable
 - <span style="color:lightgreen">**Light Green**</span>:Moderately Suitable
-- <span style="color:orange">**Orange**</span>:Marginally Suitable
+- <span style="color:orange">**yellow**</span>:Marginally Suitable
 - <span style="color:red">**Red**</span>:Not Suitable
 """, unsafe_allow_html=True)
 
@@ -107,7 +108,7 @@ if st.button("Predict"):
     else:  # prediction_value == 1
         prediction_text = "Not Suitable"
         color = "red"
-    st.success(f'The predicted suitability is: :{color}[{prediction_text}]') 
+    st.success(f'The predicted suitability is:[{prediction_text}]') 
   
 st.write("Feature Importance")
 st.image("https://github.com/Grace-cumbi/Sorghum_Suitability_ml/blob/master/feature%20importance.png?raw=true")
